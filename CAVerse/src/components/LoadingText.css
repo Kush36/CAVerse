@@ -1,0 +1,39 @@
+/* src/components/LoadingText.css */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.loadingT span {
+  position: relative;
+  font-size: 36px;
+  font-weight: 800;
+  color: #007bff;
+  animation: wave 1.5s ease-in-out infinite;
+  transition: color 0.3s ease;
+}
+
+/* Dark Mode */
+.dark-mode .loadingT span {
+  color: #60a5fa;
+}
+
+/* Staggered Delays */
+.loadingT span:nth-child(1) { animation-delay: 0s; }
+.loadingT span:nth-child(2) { animation-delay: 0.1s; }
+.loadingT span:nth-child(3) { animation-delay: 0.2s; }
+.loadingT span:nth-child(4) { animation-delay: 0.3s; }
+.loadingT span:nth-child(5) { animation-delay: 0.4s; }
+.loadingT span:nth-child(6) { animation-delay: 0.5s; }
+.loadingT span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}

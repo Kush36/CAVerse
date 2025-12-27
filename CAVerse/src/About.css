@@ -1,0 +1,24 @@
+/* src/pages/About.css */
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #000 0%, #111 100%);
+  animation: gradientShift 20s ease infinite;
+  opacity: 0.7;
+}
+
+/* Dark mode: black gradient */
+.animated-bg.dark {
+  background: linear-gradient(135deg, #000 0%, #111 100%);
+}
+
+/* Light mode: white → light gray gradient */
+.animated-bg.light {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
