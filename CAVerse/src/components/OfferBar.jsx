@@ -45,7 +45,7 @@ export default function OfferBar() {
   const { h, m, s } = formatTime(time);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[100] bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white text-sm md:text-base px-2 py-0 flex flex-wrap justify-center items-center gap-3 md:gap-6 font-semibold shadow-lg backdrop-blur-sm">
+    <div className="fixed top-0 left-0 right-0 z-[100] bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white text-sm md:text-base px-2 py-0.5 flex flex-wrap justify-center items-center gap-3 md:gap-5 font-semibold shadow-lg backdrop-blur-sm">
       <span className="flex items-center gap-2">
         🎉 <span className="hidden sm:inline">Enjoy Study, Pay Less</span>
       </span>

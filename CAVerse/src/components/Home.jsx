@@ -495,14 +495,14 @@ export default function Home() {
       </section>
 
       {/* ======================= LIVE MENTOR BADGE ======================= */}
-      <div className="fixed top-20 right-6 z-50 hidden md:block">
+      <div className="fixed top-40 right-6 z-50  md:block">
         <div className="flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-700 text-white px-5 py-3 rounded-full shadow-2xl animate-pulse hover:scale-105 transition-transform cursor-pointer">
           <div className="relative">
             <div className="w-3 h-3 bg-white rounded-full" />
             <div className="absolute inset-0 w-3 h-3 bg-white rounded-full animate-ping" />
           </div>
           <span className="font-bold text-sm">
-            {Math.floor(Math.random() * 8) + 5} Mentors Live Now
+            {Math.floor(Math.random() * 8) + 35} User Live Now
           </span>
         </div>
       </div>
