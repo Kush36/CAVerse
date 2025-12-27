@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'; // ← Added only this import for login link
 
 // Make sure this matches your backend port
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://caverse.onrender.com';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
