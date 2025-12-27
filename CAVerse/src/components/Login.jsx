@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://caverse.onrender.com';
 
 const Login = ({ onLoginSuccess }) => {
   const [formData, setFormData] = useState({
