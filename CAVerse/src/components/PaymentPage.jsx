@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaRupeeSign, FaCheckCircle, FaCopy, FaArrowLeft } from "react-icons/fa";
 import { useLocation } from "react-router-dom"; // ← Added this import
-import qrCode from "../assets/QRCode.jpeg";
+import qrCode from "../assets/qrCode.jpeg";
 export default function PaymentPage() {
     const location = useLocation(); // Get the current route state
 
