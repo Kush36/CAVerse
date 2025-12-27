@@ -11,7 +11,7 @@ const app = express();
 
 // CORS Configuration - Allow requests from React app
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:5173'], // Added Vite default port
+  origin: ['http://localhost:3000', 'https://caverse-front.onrender.com/', 'http://localhost:5173'], // Added Vite default port
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
