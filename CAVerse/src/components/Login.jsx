@@ -63,7 +63,7 @@ const Login = ({ onLoginSuccess }) => {
     try {
       console.log('📡 Sending login request to:', `${API_URL}/login`);
       
-      const response = await axios.post(`${API_URL}/login`, formData, {
+      const response = await axios.post(`${API_URL}/api/auth/login`, formData, {
         headers: {
           'Content-Type': 'application/json'
         }
