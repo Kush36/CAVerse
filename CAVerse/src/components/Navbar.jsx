@@ -52,7 +52,7 @@ function Navbar({ showOffer }) {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[90] p-4 shadow-lg transition-all duration-300
-        ${showOffer ? "mt-10 md:mt-12" : "mt-12"} // push down when offer bar is visible
+        ${showOffer ? "mt-10 md:mt-12" : "mt-10"} // push down when offer bar is visible
         ${darkMode ? "bg-black/90 backdrop-blur-md text-white" : "bg-white/90 backdrop-blur-md text-black"}`}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -110,7 +110,7 @@ function Navbar({ showOffer }) {
 
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
-        <div className="md:hidden mt-4 space-y-2 bg-inherit rounded-xl p-6 shadow-2xl border-t border-white/10">
+        <div className="md:hidden mt-5 space-y-2 bg-inherit rounded-xl p-6 shadow-2xl border-t border-white/10">
           {navLinks.map((link) => (
             <Link
               key={link.to}

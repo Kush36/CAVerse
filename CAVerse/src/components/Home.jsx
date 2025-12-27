@@ -443,7 +443,7 @@ export default function Home() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-white/90">
+              <tbody className="text-white">
                 {[
                   { feature: "Structured Notes", we: true, others: true },
                   { feature: "Accounts, Law & Tax by Same Expert Faculty", we: true, others: false },
@@ -457,7 +457,7 @@ export default function Home() {
                 ].map((item, index) => (
                   <tr
                     key={index}
-                    className={`border-t border-white/10 ${index % 2 === 0 ? 'bg-black/20' : ''} hover:bg-white/10 transition-colors`}
+                    className={`border-t border-white ${'NULL' ? 'bg-black' : ''} hover:bg-white/10 transition-colors`}
                   >
                     <td className="py-5 px-6 text-lg font-medium">
                       {item.feature}
