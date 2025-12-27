@@ -17,6 +17,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";               // ← Added this import (critical!)
 import { useTheme } from "../components/ThemeContext";
 import "../About.css";
 
@@ -76,7 +77,7 @@ const Collapsible = ({ title, icon: Icon, children, defaultOpen = false }) => {
         className={`mt-4 overflow-hidden transition-all duration-500 ease-in-out ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
       >
-        <div className="pl-9 space-y-2 text-gray-600 dark:text-gray-600 leading-relaxed">
+        <div className="pl-9 space-y-2 text-gray-600 dark:text-gray-300 leading-relaxed">
           {children}
         </div>
       </div>
@@ -220,59 +221,55 @@ export default function About() {
             </Collapsible>
           </div>
 
-          {/* CTA */}
+          {/* CTA - Now using Link */}
           <div className="mt-12 text-center">
-            <a
-              href="/signup"
+            <Link
+              to="/signup"
               className="inline-block px-8 py-4 rounded-xl font-bold text-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               Start Your CA Journey Today
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Static Footer – now flows with content */}
-      <footer className="py-20 border-t border-gray-100 dark:border-white/10">
+      {/* Footer */}
+      <footer
+        className={`relative z-10 py-20 border-t ${darkMode ? "border-white/10" : "border-gray-200"}`}
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
-
-          {/* Main Box — Background BACK & PREMIUM */}
-          <div className="inline-block p-8 rounded-3xl  dark:bg-white/8 backdrop-blur-xl shadow-2xl ring-1 ring-amber-200/40 dark:ring-amber-700/20 border border-amber-100 dark:border-amber-900/30">
-
-            <h3 className="text-3xl font-black text-gray-900 dark:text-black mb-3 tracking-tight">
+          <div
+            className={`inline-block p-8 md:p-12 rounded-3xl ${cardBg} backdrop-blur-xl shadow-2xl border ${borderClass} hover:shadow-3xl transition-all duration-500`}
+          >
+            <h3
+              className={`text-3xl md:text-4xl font-black mb-4 tracking-tight ${darkMode ? "text-white" : "text-gray-900"}`}
+            >
               Join the CaVerse Community
             </h3>
-
-            <p className="text-base text-gray-600 dark:text-black-300 mb-8 max-w-md mx-auto leading-relaxed">
+            <p className={`text-base md:text-lg ${subtleText} mb-8 max-w-md mx-auto leading-relaxed`}>
               Exclusive updates, mock alerts, and mentor slots — delivered straight to you.
             </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-
-              {/* CTA Button */}
-              <a
-                href="/signup"
-                className="px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 
-                     dark:text-black font-bold text-lg shadow-xl hover:shadow-amber-500/50 
-                     transform hover:scale-105 transition-all duration-300"
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+              {/* This was already using Link - kept as is */}
+              <Link
+                to="/signup"
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold text-lg shadow-xl hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300"
               >
                 Get Early Access
-              </a>
-
-              {/* Social Icons */}
+              </Link>
               <div className="flex gap-6">
                 {[
-                  {
-                    Icon: FaFacebook,
-                    url: "https://www.facebook.com/yourpage",
-                    color: "text-indigo-600 hover:text-indigo-800",
-                    label: "Facebook",
-                  },
                   {
                     Icon: FaInstagram,
                     url: "https://www.instagram.com/officialcaverse?igsh=eHh6bWltaXMzbTdy",
                     color: "text-pink-600 hover:text-pink-800",
                     label: "Instagram",
+                  },
+                  {
+                    Icon: FaFacebook,
+                    url: "https://www.facebook.com/yourpage",
+                    color: "text-indigo-600 hover:text-indigo-800",
+                    label: "Facebook",
                   },
                   {
                     Icon: FaTwitter,
@@ -299,15 +296,15 @@ export default function About() {
                   </a>
                 ))}
               </div>
-
             </div>
           </div>
-
-          {/* Clean Copyright */}
-          <div className="mt-12 text-sm font-medium text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} <span className="font-bold text-amber-700 dark:text-amber-500">CaVerse</span>. Crafted with excellence.
+          <div className={`mt-12 text-sm font-medium ${subtleText}`}>
+            © {new Date().getFullYear()}{" "}
+            <span className="font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+              CaVerse
+            </span>
+            . Crafted with excellence.
           </div>
-
         </div>
       </footer>
     </div>
