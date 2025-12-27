@@ -657,7 +657,7 @@ export default function Home() {
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-100">
         <Link
           to="/signup"
-          className="group relative px-3 py-2 rounded-full font-bold text-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-2xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all overflow-hidden"
+          className="group relative px-1 py-2 rounded-full font-bold text-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-2xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all overflow-hidden"
         >
           <span className="relative z-10">Start Free Trial Now</span>
 
