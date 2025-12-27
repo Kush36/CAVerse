@@ -385,7 +385,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 mb-16">
             <div className="bg-black/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30">
               <div className="text-5xl md:text-6xl font-black text-cyan-400 mb-2">
-                <AnimatedCounter end={45000} suffix="+" />
+                <AnimatedCounter end={4500} suffix="+" />
               </div>
               <p className="text-xl text-white/90">Students Trained</p>
             </div>

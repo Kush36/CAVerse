@@ -31,7 +31,7 @@ export default function FoundationLevel() {
     {
       id: "important-questions",
       name: "FULL SYLLABUS MOCK",
-      price: 2,
+      price: 1999,
       original: 3999,
       features: [
         "Chapter-wise + Full Syllabus Important Questions PDF",
